@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #ffffff;
+        }
+
+        /* ===== HEADER AND NAV ===== */
+        header {
+            background: #1e6bf1;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            background: linear-gradient(#eaf2ff, #9dbbff);
+            color: #003c8f;
+            padding: 8px 18px;
+            border-radius: 4px;
+            margin-left: 8px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            background: white;
+        }
+
+        /* ===== MAIN WRAPPER ===== */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        /* ===== HEADER TEXT BOX ===== */
+        .welcome-header {
+            width: 75%;
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        /* ===== MAIN CONTENT BOX ===== */
+        .page-container {
+            width: 75%;
+            border: 1px solid #333;
+            padding: 30px;
+            min-height: 550px;
+        }
+
+        /* ===== ACCORDION ===== */
+        .accordion-item {
+            border: 1px solid #333;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: #eaf2ff;
+            color: #003c8f;
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-icon {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 18px;
+            font-size: 14px;
+            line-height: 1.7;
+            background: #ffffff;
+        }
+
+        .accordion-item.active .accordion-content {
+            display: block;
+        }
+
+        .accordion-item.active .accordion-icon {
+            content: "-";
+        }
+
+        /* ===== BOTTOM STRIP ===== */
+        .bottom-strip {
+            background: #3b7cf5;
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .bottom-strip img {
+            width: 55px;
+            height: 55px;
+            background: #ddd;
+            object-fit: cover;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1e6bf1;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            bottom: 0;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .welcome-header,
+            .page-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ===== TOP NAV ===== -->
+<header>
+    <a href="homepage.html">
+        <img src="Assets/pet LOGOjpg.jpg"
+             alt="Logo"
+             style="height:40px; background-color:#ffffff; padding:8px 14px; border-radius:4px;">
+    </a>
+
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="services.html">Services</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="contact.html">Contact</a>
+        <a href="meettheteam.html">MeetTheTeam</a>   
+    </nav>
+</header>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main>
+
+    <div class="welcome-header">
+        Our Skills And What We Can Do
+    </div>
+
+    <div class="page-container">
+
+        <!-- ===== ACCORDION ===== -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+            Pet Care and Supervision
+                <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+                <p>
+                    We are skilled in providing attentive and responsible care for pets of all types. This includes monitoring behaviour, ensuring pets are comfortable and safe, and maintaining their daily routines while under our supervision.
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header">
+                Hygiene Skills
+                <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+                <p>
+                    Our team has experience in basic hygiene care to help keep pets clean and healthy. These skills include bathing, brushing, light trimming and maintaining clean living spaces like bedding and cages. But only if you want.
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header">
+                Exercise and Handling Skills
+                <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+                <p>
+                    We are experienced in safely handling pets during walks. Our skills include managing different pets, ensuring pets get exercise and adjusting activities based on the weather.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<!-- ===== BOTTOM STRIP ===== -->
+<section class="bottom-strip">
+    <img src="Assets/facebook.png" alt="">
+    <img src="Assets/Instagram_logo_2022.svg.png" alt="">
+    <img src="Assets/tiktokimg.png" alt="">
+    <img src="Assets/booksyIMG.png" alt="">
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+</footer>
+
+<!-- ===== ACCORDION SCRIPT ===== -->
+<script>
+    const headers = document.querySelectorAll(".accordion-header");
+
+    headers.forEach(header => {
+        header.addEventListener("click", () => {
+            const item = header.parentElement;
+            const icon = header.querySelector(".accordion-icon");
+
+            item.classList.toggle("active");
+            icon.textContent = item.classList.contains("active") ? "-" : "+";
+        });
+    });
+</script>
+
+</body>
+</html>

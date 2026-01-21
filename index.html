@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #ffffff;
+        }
+
+        /* ===== HEADER / NAV ===== */
+        header {
+            background: #1e6bf1;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            background: linear-gradient(#eaf2ff, #9dbbff);
+            color: #003c8f;
+            padding: 8px 18px;
+            border-radius: 4px;
+            margin-left: 8px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            background: white;
+        }
+
+        /* ===== MAIN ===== */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        /* ===== HEADER TEXT BOX ===== */
+        .welcome-header {
+            width: 75%;
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        /* ===== MAIN CONTENT BOX ===== */
+        .page-container {
+            width: 75%;
+            border: 1px solid #333;
+            padding: 30px;
+            min-height: 550px;
+        }
+
+        /* ===== TWO COLUMN LAYOUT ===== */
+        .content-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+        }
+
+        .text-column p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        /* ===== IMAGE CAROUSEL ===== */
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 345px;
+            overflow: hidden;
+            border-radius: 6px;
+        }
+
+        .slides {
+            display: flex;
+            height: 100%;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 22px;
+            background: rgba(0,0,0,0.4);
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        .carousel .prev { left: 10px; }
+        .carousel .next { right: 10px; }
+
+        .carousel button:hover {
+            background: rgba(0,0,0,0.7);
+        }
+
+        /* ===== BOTTOM ===== */
+        .bottom-strip {
+            background: #3b7cf5;
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .bottom-strip img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+        }
+
+        /* ===== STICKY FOOTER ===== */
+        footer {
+            background: #1e6bf1;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .welcome-header,
+            .page-container {
+                width: 90%;
+            }
+
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== TOP NAV ===== -->
+<header>
+    <a href="homepage.html">
+        <img src="Assets/pet LOGOjpg.jpg"
+             alt="Logo"
+             style="height:40px; background-color:#ffffff; padding:8px 14px; border-radius:4px;">
+    </a>
+
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="services.html">Services</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="contact.html" style="margin-left:10px; padding:8px 16px; background:linear-gradient(#e8f1ff,#b9d4ff); border:1px solid #8bb3ff; border-radius:6px; text-decoration:none; color:#003366;">Contact</a>
+        <a href="meettheteam.html">MeetTheTeam</a>   
+    </nav>
+</header>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main>
+
+    <div class="welcome-header">
+        WELCOME!
+    </div>
+
+    <div class="page-container">
+
+        <div class="content-layout">
+
+            <!-- LEFT TEXT -->
+            <div class="text-column">
+                <p>Welcome to our pet sitting service where we can or will look after your pet for an alligated slot that you have puck. You can find us on the shown platforms at the bottom with booksy being how to book with us then your prefered time and pet sitter.</p>
+                <p>We offer a number of differant things like pet sitting for the main point but our co workers will feed, water, rest and walk your pet only after your approval.</p>
+                <p>Our times are displayed on booksy with different workers working different days so every day is available for our customers.</p>
+                <p>Thanks for visiting our website we hope you find what your looking for!</p>
+            </div>
+
+            <!-- RIGHT CAROUSEL -->
+            <div class="image-column">
+
+                <div class="carousel">
+                    <div class="slides">
+                        <img src="Assets/pet sitting welcomeIMG.jpg">
+                        <img src="Assets/carroulsel dog image 2.jpg">
+                        <img src="Assets/carrousel image 3.webp">
+                    </div>
+
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+                </div>
+
+                <p>Times and days for booking: Monday - Friday all workers. Saturday - Sunday limited slots and workers.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<!-- ===== BOTTOM IMAGE STRIP ===== -->
+<section class="bottom-strip">
+    <img src="Assets/facebook.png" alt="">
+    <img src="Assets/Instagram_logo_2022.svg.png" alt="">
+    <img src="Assets/tiktokimg.png" alt="">
+    <img src="Assets/booksyIMG.png" alt="">
+</section>
+
+<footer></footer>
+
+<!-- ===== CAROUSEL SCRIPT ===== -->
+<script>
+const slides = document.querySelector(".slides");
+const images = document.querySelectorAll(".slides img");
+
+let index = 0;
+let autoPlay;
+
+function showSlide(i) {
+    index = (i + images.length) % images.length;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// buttons
+document.querySelector(".next").onclick = () => showSlide(index + 1);
+document.querySelector(".prev").onclick = () => showSlide(index - 1);
+
+// autoplay
+function startAuto() {
+    autoPlay = setInterval(() => showSlide(index + 1), 4000);
+}
+function stopAuto() {
+    clearInterval(autoPlay);
+}
+startAuto();
+
+/* swipe + drag */
+let startX = 0;
+let isDown = false;
+
+slides.addEventListener("mousedown", e => {
+    isDown = true;
+    stopAuto();
+    startX = e.clientX;
+});
+
+slides.addEventListener("mouseup", e => {
+    if (!isDown) return;
+    isDown = false;
+    let diff = e.clientX - startX;
+    if (diff > 50) showSlide(index - 1);
+    if (diff < -50) showSlide(index + 1);
+    startAuto();
+});
+
+slides.addEventListener("touchstart", e => {
+    stopAuto();
+    startX = e.touches[0].clientX;
+});
+
+slides.addEventListener("touchend", e => {
+    let diff = e.changedTouches[0].clientX - startX;
+    if (diff > 50) showSlide(index - 1);
+    if (diff < -50) showSlide(index + 1);
+    startAuto();
+});
+</script>
+
+</body>
+</html>

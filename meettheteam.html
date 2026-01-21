@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOOTSTRAP 4 -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #ffffff;
+        }
+
+        header {
+            background: #1e6bf1;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            background: linear-gradient(#eaf2ff, #9dbbff);
+            color: #003c8f;
+            padding: 8px 18px;
+            border-radius: 4px;
+            margin-left: 8px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            background: white;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .about-header {
+            width: 75%;
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .page-container {
+            width: 75%;
+            border: 1px solid #333;
+            padding: 30px;
+            min-height: 600px;
+        }
+
+        .card img {
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .bottom-strip {
+            background: #3b7cf5;
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .bottom-strip img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+        }
+
+        footer {
+            background: #1e6bf1;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            bottom: 0;
+        }
+
+        @media (max-width: 900px) {
+            .about-header,
+            .page-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="homepage.html">
+        <img src="Assets/pet LOGOjpg.jpg"
+             alt="Logo"
+             style="height:40px; background-color:#ffffff; padding:8px 14px; border-radius:4px;">
+    </a>
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="services.html">Services</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="contact.html">Contact</a>    
+        <a href="meettheteam.html">MeetTheTeam</a>   
+        </a>
+    </nav>
+</header>
+
+<main>
+    <div class="about-header">
+        Meet the team
+    </div>
+
+    <div class="page-container">
+
+        <!-- BOOTSTRAP CARDS -->
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="Assets/meet the TEAM 1 1 1 1 1 1 1 1 1 1.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <p class="card-text">
+                           Sarah is a caring and reliable pet sitter who loves working with animals of all kinds. She has experience looking after dogs, cats, and small pets, and always makes sure they feel safe and comfortable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="Assets/MEET THE TEAM 2 2 2 2 2 2 2.avif" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Emily is friendly and patient, with a special love for dogs. She enjoys spending time walking, feeding, and playing with pets, making sure they get plenty of attention while their owners are away.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="Assets/meet the team 3 3 3 3 3 3 3.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <p class="card-text">
+                           Jack is responsible and hardworking, helping with daily pet care and routines. He focuses on keeping pets happy, well-fed and relaxed and enjoys building trust with both pets and their owners.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<section class="bottom-strip">
+    <img src="Assets/facebook.png" alt="">
+    <img src="Assets/Instagram_logo_2022.svg.png" alt="">
+    <img src="Assets/tiktokimg.png" alt="">
+    <img src="Assets/booksyIMG.png" alt="">
+</section>
+
+<footer>
+</footer>
+
+</body>
+</html>
